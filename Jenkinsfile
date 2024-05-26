@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Build and Test') {
             steps {
-                sh 'docker build -t dinhcam89/node-todo-test:latest .'
+                sh 'docker build -t quyhoangtat/jenkinspipeline:latest .'
             }
         }
         // stage('Login') {
@@ -30,7 +30,7 @@ pipeline {
         stage('Push') {
             // some block
             steps {
-                sh 'docker push dinhcam89/node-todo-test'
+                sh 'docker push quyhoangtat/jenkinspipeline'
             }
         }
         stage('Deploy to EKS Cluster') {
